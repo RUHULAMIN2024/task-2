@@ -21,12 +21,7 @@ const updateBlog = async (
   if (!blog) {
     throw new AppError(StatusCodes.FORBIDDEN, 'Blog not found');
   }
-  if (blog.author.toString() !== userId) {
-    throw new AppError(
-      StatusCodes.UNAUTHORIZED,
-      'You are not authorized to delete this blog',
-    );
-  }
+
   const result = await Blog.findByIdAndUpdate(blogId, payload, {
     new: true,
     runValidators: true,
@@ -34,33 +29,12 @@ const updateBlog = async (
   return result;
 };
 
-// const deleteBlog = async (id: string, userId: string) => {
-//   const blog = await Blog.findById(id);
-//   if (!blog) {
-//     throw new AppError(StatusCodes.FORBIDDEN, 'Blog not found');
-//   }
-
-//   if (blog.author.toString() !== userId) {
-//     throw new AppError(
-//       StatusCodes.UNAUTHORIZED,
-//       'You are not authorized to delete this blog',
-//     );
-//   }
-//   const result = await Blog.findByIdAndDelete(id);
-//   return result;
-// };
-
 const deleteBlog = async (id: string, userId: string) => {
   const blog = await Blog.findById(id);
   if (!blog) {
     throw new AppError(StatusCodes.FORBIDDEN, 'Blog not found');
   }
-  if (blog.author.toString() !== userId) {
-    throw new AppError(
-      StatusCodes.UNAUTHORIZED,
-      'You are not authorized to delete this blog',
-    );
-  }
+
   const result = await Blog.findByIdAndDelete(id);
 
   return result;

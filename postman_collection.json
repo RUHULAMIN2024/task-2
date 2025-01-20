@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "adb2d87a-5ef1-4c27-b16e-fbf645e1ff6e",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39817868"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "creat user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Ruhul Amin\",\r\n  \"email\": \"tesfgfgt@example.com\",\r\n  \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://task-2-two-theta.vercel.app/api/auth/register",
+							"protocol": "https",
+							"host": [
+								"task-2-two-theta",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"admin@example.com\",\r\n  \"password\": \"adminpassword\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://task-2-two-theta.vercel.app/api/auth/login",
+							"protocol": "https",
+							"host": [
+								"task-2-two-theta",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "blog post",
+			"item": [
+				{
+					"name": "create blog",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2NTc3NmYwNzVjN2FmZjc0ZjlkYTAiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzM3MzgxNTUwLCJleHAiOjE3Mzk5NzM1NTB9.4-HxNmmSgz4CLMxbv-FlZH2P1bQ1dLenbUbRvF27wTo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"My Bgfddflog 2\",\r\n    \"content\": \"This is dfgdfg content of my blog 2.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://task-2-two-theta.vercel.app/api/blogs/create",
+							"protocol": "https",
+							"host": [
+								"task-2-two-theta",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single blog",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2NTc3NmYwNzVjN2FmZjc0ZjlkYTAiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzM3MzgxNTUwLCJleHAiOjE3Mzk5NzM1NTB9.4-HxNmmSgz4CLMxbv-FlZH2P1bQ1dLenbUbRvF27wTo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://task-2-two-theta.vercel.app/api/blogs/byId/6766ba060be83fef091865d7",
+							"protocol": "https",
+							"host": [
+								"task-2-two-theta",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"byId",
+								"6766ba060be83fef091865d7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all blog",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://task-2-two-theta.vercel.app/api/blogs/all?search=first&sortBy=createdAt&sortOrder=asc&filter=676564fd3aa56751c2909b4e&Authorization=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2NTc3NmYwNzVjN2FmZjc0ZjlkYTAiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzM3MzgxNTUwLCJleHAiOjE3Mzk5NzM1NTB9.4-HxNmmSgz4CLMxbv-FlZH2P1bQ1dLenbUbRvF27wTo",
+							"protocol": "https",
+							"host": [
+								"task-2-two-theta",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"all"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "first"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdAt"
+								},
+								{
+									"key": "sortOrder",
+									"value": "asc"
+								},
+								{
+									"key": "filter",
+									"value": "676564fd3aa56751c2909b4e"
+								},
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2NTc3NmYwNzVjN2FmZjc0ZjlkYTAiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzM3MzgxNTUwLCJleHAiOjE3Mzk5NzM1NTB9.4-HxNmmSgz4CLMxbv-FlZH2P1bQ1dLenbUbRvF27wTo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update blog",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2NTc3NmYwNzVjN2FmZjc0ZjlkYTAiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzM3MzgxNTUwLCJleHAiOjE3Mzk5NzM1NTB9.4-HxNmmSgz4CLMxbv-FlZH2P1bQ1dLenbUbRvF27wTo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Updated Blog Title\",\r\n  \"content\": \"Updated content.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://task-2-two-theta.vercel.app/api/blogs/update/6766ba060be83fef091865d7",
+							"protocol": "https",
+							"host": [
+								"task-2-two-theta",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"update",
+								"6766ba060be83fef091865d7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete blog",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY2NTc3NmYwNzVjN2FmZjc0ZjlkYTAiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUuY29tIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzM3MzgxNTUwLCJleHAiOjE3Mzk5NzM1NTB9.4-HxNmmSgz4CLMxbv-FlZH2P1bQ1dLenbUbRvF27wTo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://task-2-two-theta.vercel.app/api/blogs/delete/6766ba060be83fef091865d7",
+							"protocol": "https",
+							"host": [
+								"task-2-two-theta",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"blogs",
+								"delete",
+								"6766ba060be83fef091865d7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

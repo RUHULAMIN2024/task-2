@@ -38,11 +38,6 @@ The application includes secure authentication, role-based access control, and p
 - **Delete Blog**: Admin can delete blog.
 - **Public Blog API**: Accessible to users for viewing blogs with options for search, sorting, and filtering.
 
-### Admin Features
-
-- **Block Users**: Admins can block users, preventing them from logging in or creating blogs.
-- **Delete Blogs**: Admin can create, update and delete blog.
-
 ### Search, Sort, and Filter
 
 - Search blogs by title, content, or author name.
